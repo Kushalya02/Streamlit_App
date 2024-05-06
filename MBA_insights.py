@@ -105,4 +105,20 @@ with Order_details:
                         yaxis = dict(title = "Profit", titlefont = dict(size=19)))
     st.plotly_chart(data3,use_container_width=True)
 
+with association_rules:
+    st.header("Market Basket Analysis Association Rules")
+    st.write(rules)
+    import seaborn as sns
 
+    # Define x and y axis options
+    x_axis_options = list(rules.columns)
+    y_axis_options = list(rules.columns)
+
+    # Create the heatmap based on selected axes
+    pivot_data = rules.pivot_table(index='antecedents', columns='consequents', values='lift')  # Replace 'your_value_column' with the actual column containing the values
+
+    heatfig, ax = plt.subplots(figsize=(10, 6))
+    sns.heatmap(pivot_data, ax=ax, annot=True, cmap="viridis")  # Customize as needed
+
+    # Display the heatmap in Streamlit
+    st.pyplot(heatfig)
