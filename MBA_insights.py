@@ -38,3 +38,40 @@ with Order_details:
     else:
         filtered_df = orders.copy()  
 
+    #Charts for the Orders dataset
+    filtered_df.groupby(by=['Category'],as_index=False)['Sales'].sum()
+    #Sales by sub category
+    st.subheader('Sales by Sub Category')
+    fig1=px.bar(filtered_df,x='Sub-Category',y='Sales', height=600,width=700)
+        
+    st.plotly_chart(fig1)
+
+
+    #sales distrubution by category
+    st.subheader('Sales distribution by category')
+    catedf=orders.groupby(by=['Category'],as_index=False)['Sales'].sum()
+    fig2=px.bar(catedf,x="Category",y="Sales")
+    st.plotly_chart(fig2)
+   
+   
+    #Profitability of categories
+    st.subheader('Profitability of Categories')
+    catedf=orders.groupby(by=['Category'],as_index=False)['Profit'].sum()
+    fig3=px.bar(catedf,x="Category",y="Profit")
+    st.plotly_chart(fig3)
+   
+   
+   
+   
+    #Sales by country
+    st.subheader ('Sales by country')
+    fig4=px.pie(filtered_df,values='Sales', names='Country',hole=0.5,height=400,width=600)
+    st.plotly_chart(fig4)
+
+     #bar chart
+    st.subheader('Sales distribution by country')
+    catedf=orders.groupby(by=['Country'],as_index=False)['Sales'].sum()
+    fig5=px.bar(catedf,x="Country",y="Sales",color="Country")
+    st.plotly_chart(fig5)
+
+   
