@@ -115,10 +115,10 @@ with association_rules:
     y_axis_options = list(rules.columns)
 
     # Create the heatmap based on selected axes
-    pivot_data = rules.pivot_table(index='antecedents', columns='consequents', values='lift')  # Replace 'your_value_column' with the actual column containing the values
+    pivot_data = rules.pivot_table(index='antecedents', columns='consequents', values='lift')  
 
     heatfig, ax = plt.subplots(figsize=(10, 6))
-    sns.heatmap(pivot_data, ax=ax, annot=True, cmap="viridis")  # Customize as needed
+    sns.heatmap(pivot_data, ax=ax, annot=True, cmap="viridis")  
 
-    # Display the heatmap in Streamlit
+
     st.pyplot(heatfig)
