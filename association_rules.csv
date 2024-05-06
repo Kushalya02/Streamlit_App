@@ -1,0 +1,15 @@
+antecedents,consequents,antecedent support,consequent support,support,confidence,lift,leverage,conviction,zhangs_metric
+frozenset({'item_1_Accessories'}),frozenset({'item_2_Tables'}),0.08,0.06,0.02,0.25,4.166666667,0.0152,1.253333333,0.826086957
+frozenset({'item_2_Tables'}),frozenset({'item_1_Accessories'}),0.06,0.08,0.02,0.333333333,4.166666667,0.0152,1.38,0.808510638
+frozenset({'item_1_Appliances'}),frozenset({'item_2_Accessories'}),0.12,0.04,0.02,0.166666667,4.166666667,0.0152,1.152,0.863636364
+frozenset({'item_2_Accessories'}),frozenset({'item_1_Appliances'}),0.04,0.12,0.02,0.5,4.166666667,0.0152,1.76,0.791666667
+frozenset({'item_1_Bookcases'}),frozenset({'item_2_Supplies'}),0.16,0.02,0.02,0.125,6.25,0.0168,1.12,1
+frozenset({'item_2_Supplies'}),frozenset({'item_1_Bookcases'}),0.02,0.16,0.02,1,6.25,0.0168,inf,0.857142857
+frozenset({'item_1_Chairs'}),frozenset({'item_2_Phones'}),0.04,0.16,0.02,0.5,3.125,0.0136,1.68,0.708333333
+frozenset({'item_2_Phones'}),frozenset({'item_1_Chairs'}),0.16,0.04,0.02,0.125,3.125,0.0136,1.097142857,0.80952381
+frozenset({'item_1_Machines'}),frozenset({'item_2_Accessories'}),0.08,0.04,0.02,0.25,6.25,0.0168,1.28,0.913043478
+frozenset({'item_2_Accessories'}),frozenset({'item_1_Machines'}),0.04,0.08,0.02,0.5,6.25,0.0168,1.84,0.875
+frozenset({'item_1_Phones'}),frozenset({'item_2_Appliances'}),0.24,0.06,0.06,0.25,4.166666667,0.0456,1.253333333,1
+frozenset({'item_2_Appliances'}),frozenset({'item_1_Phones'}),0.06,0.24,0.06,1,4.166666667,0.0456,inf,0.808510638
+frozenset({'item_2_Copiers'}),frozenset({'item_1_Storage'}),0.2,0.06,0.04,0.2,3.333333333,0.028,1.175,0.875
+frozenset({'item_1_Storage'}),frozenset({'item_2_Copiers'}),0.06,0.2,0.04,0.666666667,3.333333333,0.028,2.4,0.744680851
